@@ -1,0 +1,17 @@
+!go.sum
+gomon_spawn
+bin
+
+# .ENV
+.env
+
+# Some File
+upload
+static/uploads/
+!upload/file/company
+.DS_store
+desktop.ini
+
+# Logs folder
+
+# Swagger

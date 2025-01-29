@@ -1,0 +1,38 @@
+basePath: /
+host: localhost:4000
+info:
+  contact: {}
+  description: API for uploading multiple files
+  title: File Upload API
+  version: "1.0"
+paths:
+  /upload:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Upload multiple files to the server
+      parameters:
+      - description: Files to upload
+        in: formData
+        name: files
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Files uploaded successfully
+          schema:
+            type: string
+        "400":
+          description: Failed to parse form
+          schema:
+            type: string
+        "500":
+          description: Failed to save file
+          schema:
+            type: string
+      summary: Upload multiple files
+      tags:
+      - Files
+swagger: "2.0"
